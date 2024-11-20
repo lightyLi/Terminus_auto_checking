@@ -16,11 +16,11 @@
 ## 1) 安装环境
 1. 下载代码
 ```shell
-git clone
+git clone https://github.com/lightyLi/Terminus_auto_checking.git
 ```
 2. 安装对应的包
 ```shell
-cd 
+cd Terminus_auto_checking
 touch .env
 pip3 install -r requirements.txt
 ```
@@ -55,7 +55,7 @@ crontab -e
 在最后一行输入
 
 ```shell
-0 2 * * * cd /root/emby-server-checkin && python3 terminus.py 2>&1
+0 15 * * * cd /root/emby-server-checkin && python3 terminus.py 2>&1
 ```
 
-替换为你的项目路径，保存退出后自动签到程序将在 UTC+8 的 10:00, 10:05 分自动签到
+替换为你的项目路径，保存退出后自动签到程序将在 UTC+8 的下午3点自动签到
