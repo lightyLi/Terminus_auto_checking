@@ -1,2 +1,3 @@
 session/
 .env
+.DS_Store
