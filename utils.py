@@ -2,7 +2,7 @@ import logging
 import os
 
 
-top_folder = '/Users/lighty/Documents/CODE/Python/Terminus_auto_checking'
+top_folder = '' # 修改为你存放代码的绝对路径
 
 # 生成日志文件名
 log_filename = os.path.join(top_folder, 'Terminus_checking_log.log')
