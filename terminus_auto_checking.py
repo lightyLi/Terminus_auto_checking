@@ -8,13 +8,13 @@ from telethon import TelegramClient, events
 from telethon.sessions import SQLiteSession
 import google.generativeai as genai
 
-from utils import logger
+from utils import logger, top_folder
 
 load_dotenv()
 
 # 设置保存图片的文件夹
-SAVE_PATH = './session/files'
-session_path = './session'
+SAVE_PATH = os.path.join(top_folder, 'session/files')
+session_path = os.path.join(top_folder, 'session')
 if not os.path.exists(SAVE_PATH):
     os.makedirs(SAVE_PATH)
 
@@ -105,7 +105,7 @@ async def message_handler(event):
 
 async def start_client(client):
     await client.start()
-    await asyncio.sleep(20)  # 等待15秒后断开连接
+    await asyncio.sleep(35)  # 等待35秒后断开连接
     await client.disconnect()
 
 # 多账号配置，根据.env文件中的变量名获取不同用户的数据
@@ -130,6 +130,8 @@ for account in accounts:
     time.sleep(30)  # 每个账号处理完后休息30秒
 
 logger.info('All accounts finished')
+
+
 
 # 清理保存的图片
 for file in os.listdir(SAVE_PATH):

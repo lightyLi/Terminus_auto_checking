@@ -1,8 +1,11 @@
 import logging
 import os
 
+
+top_folder = '/Users/lighty/Documents/CODE/Python/Terminus_auto_checking'
+
 # 生成日志文件名
-log_filename = './Terminus_checking_log.log'
+log_filename = os.path.join(top_folder, 'Terminus_checking_log.log')
 
 def setup_logger():
     # 配置logging
