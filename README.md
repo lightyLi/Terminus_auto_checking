@@ -37,6 +37,11 @@ pip3 install -r requirements.txt
 查看博客 [Gemini Pro 免费 API key 获取方法](https://hoyo.win/llm/get-gemini/)
 
 ## 4) 运行代码
+
+修改utils中的 **top_folder** 变量为你的存放代码的绝对路径（为了在Apple shorts cuts中能正常运行）。
+
+
+
 在命令行中：
 ```shell
 python3 terminus.py
@@ -59,3 +64,9 @@ crontab -e
 ```
 
 替换为你的项目路径，保存退出后自动签到程序将在 UTC+8 的下午3点自动签到
+
+
+
+## 6) Apple shortcuts 快捷指令运行
+
+https://www.icloud.com/shortcuts/70d3b6e82a454ac786b5495cf0c9d427
